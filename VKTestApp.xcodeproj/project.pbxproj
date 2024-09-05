@@ -13,6 +13,11 @@
 		3FA25CC82C87658C0079A908 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA25CC62C87658C0079A908 /* Main.storyboard */; };
 		3FA25CCA2C87658D0079A908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA25CC92C87658D0079A908 /* Assets.xcassets */; };
 		3FA25CCD2C87658D0079A908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA25CCB2C87658D0079A908 /* LaunchScreen.storyboard */; };
+		3FA25CD82C8852970079A908 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA25CD72C8852970079A908 /* WeatherViewController.swift */; };
+		3FA25CDC2C885A040079A908 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA25CDB2C885A040079A908 /* WeatherView.swift */; };
+		3FA25CDE2C8887CB0079A908 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA25CDD2C8887CB0079A908 /* LocationViewController.swift */; };
+		3FA25CE62C88C7E40079A908 /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA25CE52C88C7E40079A908 /* TicTacToeViewController.swift */; };
+		3FA25CE82C88C8020079A908 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA25CE72C88C8020079A908 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		3FA25CC92C87658D0079A908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FA25CCC2C87658D0079A908 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FA25CCE2C87658D0079A908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FA25CD72C8852970079A908 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		3FA25CDB2C885A040079A908 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		3FA25CDD2C8887CB0079A908 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		3FA25CE52C88C7E40079A908 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
+		3FA25CE72C88C8020079A908 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,9 @@
 		3FA25CBF2C87658C0079A908 /* VKTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FA25CD62C8840FF0079A908 /* TicTacToe */,
+				3FA25CD52C8840F80079A908 /* Location */,
+				3FA25CD42C8840F00079A908 /* Weather */,
 				3FA25CC02C87658C0079A908 /* AppDelegate.swift */,
 				3FA25CC22C87658C0079A908 /* SceneDelegate.swift */,
 				3FA25CC42C87658C0079A908 /* ViewController.swift */,
@@ -65,6 +78,32 @@
 				3FA25CCE2C87658D0079A908 /* Info.plist */,
 			);
 			path = VKTestApp;
+			sourceTree = "<group>";
+		};
+		3FA25CD42C8840F00079A908 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				3FA25CD72C8852970079A908 /* WeatherViewController.swift */,
+				3FA25CDB2C885A040079A908 /* WeatherView.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		3FA25CD52C8840F80079A908 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3FA25CDD2C8887CB0079A908 /* LocationViewController.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		3FA25CD62C8840FF0079A908 /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				3FA25CE52C88C7E40079A908 /* TicTacToeViewController.swift */,
+				3FA25CE72C88C8020079A908 /* Storyboard.storyboard */,
+			);
+			path = TicTacToe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA25CCD2C87658D0079A908 /* LaunchScreen.storyboard in Resources */,
+				3FA25CE82C88C8020079A908 /* Storyboard.storyboard in Resources */,
 				3FA25CCA2C87658D0079A908 /* Assets.xcassets in Resources */,
 				3FA25CC82C87658C0079A908 /* Main.storyboard in Resources */,
 			);
@@ -138,7 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA25CDC2C885A040079A908 /* WeatherView.swift in Sources */,
 				3FA25CC52C87658C0079A908 /* ViewController.swift in Sources */,
+				3FA25CD82C8852970079A908 /* WeatherViewController.swift in Sources */,
+				3FA25CDE2C8887CB0079A908 /* LocationViewController.swift in Sources */,
+				3FA25CE62C88C7E40079A908 /* TicTacToeViewController.swift in Sources */,
 				3FA25CC12C87658C0079A908 /* AppDelegate.swift in Sources */,
 				3FA25CC32C87658C0079A908 /* SceneDelegate.swift in Sources */,
 			);
