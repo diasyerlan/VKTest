@@ -7,12 +7,14 @@
 
 import UIKit
 import CoreLocation
+import SnapKit
 
 class LocationViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     let cityName: UILabel = {
         let label = UILabel()
+        label.text = "Fetching city..."
         label.font = UIFont.systemFont(ofSize: 24)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -21,6 +23,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
         setupUI()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -33,10 +36,9 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
     func setupUI() {
         view.addSubview(cityName)
         
-        NSLayoutConstraint.activate([
-            cityName.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            cityName.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
+        cityName.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

@@ -15,19 +15,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-                // Create a new window for the scene
                 window = UIWindow(windowScene: windowScene)
-
-                // Instantiate the storyboard by its name
-                let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
-
-                // Instantiate the initial view controller
+        
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let initialViewController = storyboard.instantiateInitialViewController()
-
-                // Set the initial view controller as the root view controller
                 window?.rootViewController = initialViewController
-                
-                // Make the window visible
+        
                 window?.makeKeyAndVisible()
     }
 

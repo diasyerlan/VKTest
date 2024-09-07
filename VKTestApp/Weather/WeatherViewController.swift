@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreLocation
+import Alamofire
+import SnapKit
 
 class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -33,18 +35,15 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
         view.addSubview(weatherView)
         view.addSubview(activityIndicator)
         
-        weatherView.translatesAutoresizingMaskIntoConstraints = false
+        weatherView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         
-        NSLayoutConstraint.activate([
-            weatherView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            weatherView.topAnchor.constraint(equalTo: view.topAnchor),
-            weatherView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            
-            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
+        activityIndicator.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
+
     
     func setupLocationManager() {
         locationManager.delegate = self
@@ -61,38 +60,41 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func fetchWeatherData(for coordinate: CLLocationCoordinate2D) {
-        let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&units=metric&appid=\(apiKey)"
+        let urlString = "https://api.openweathermap.org/data/2.5/weather"
+        let parameters: [String: Any] = [
+            "lat": coordinate.latitude,
+            "lon": coordinate.longitude,
+            "units": "metric",
+            "appid": apiKey
+        ]
         
-        guard let url = URL(string: urlString) else { return }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            DispatchQueue.main.async {
-                self.stopLoading()
-            }
-            guard let data = data, error == nil else {
-                print("ERROR - \(String(describing: error?.localizedDescription))")
-                return
-            }
-            
-            do {
-                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                   let main = json["main"] as? [String: Any],
-                   let temperature = main["temp"] as? Double,
-                   let name = json["name"] as? String,
-                   let weatherArray = json["weather"] as? [[String: Any]],
-                   let weather = weatherArray.first,
-                   let description = weather["description"] as? String {
-                    DispatchQueue.main.async {
-                        self.weatherView.updateWeather(cityName: name, temperature: temperature, weatherDescription: description)
+        // Use Alamofire to fetch weather data
+        AF.request(urlString, parameters: parameters).responseData { response in
+            self.stopLoading()
+            switch response.result {
+            case .success(let res):
+                do {
+                    let value = try JSONSerialization.jsonObject(with: res)
+                    if let json = value as? [String: Any],
+                       let main = json["main"] as? [String: Any],
+                       let temperature = main["temp"] as? Double,
+                       let name = json["name"] as? String,
+                       let weatherArray = json["weather"] as? [[String: Any]],
+                       let weather = weatherArray.first,
+                       let description = weather["description"] as? String {
+                        // Update the UI with weather data on the main thread
+                        DispatchQueue.main.async {
+                            self.weatherView.updateWeather(cityName: name, temperature: temperature, weatherDescription: description)
+                        }
                     }
+                } catch {
+                    print("Error in decoding proccess - \(error)")
                 }
                 
-            } catch let error {
-                print("JSON ERROR: \(error.localizedDescription)")
+            case .failure(let error):
+                print("ERROR: \(error.localizedDescription)")
             }
         }
-        task.resume()
     }
     
     func startLoading() {
@@ -106,5 +108,4 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("ERROR: Failed to get user location - \(error.localizedDescription)")
     }
-    
 }

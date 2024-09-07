@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class WeatherView: UIView {
     
@@ -18,12 +19,12 @@ class WeatherView: UIView {
         return icon
     }()
     
-    let cityName: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 24)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+//    let cityName: UILabel = {
+//        let label = UILabel()
+//        label.font = UIFont.systemFont(ofSize: 24)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
     
     let temperature: UILabel = {
         let label = UILabel()
@@ -44,26 +45,24 @@ class WeatherView: UIView {
     
     func setupUI() {
         addSubview(weatherIcon)
-        addSubview(cityName)
+//        addSubview(cityName)
         addSubview(temperature)
-        
-        NSLayoutConstraint.activate([
-            weatherIcon.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            weatherIcon.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 50),
-            weatherIcon.widthAnchor.constraint(equalToConstant: 100),
-            weatherIcon.heightAnchor.constraint(equalToConstant: 100),
-            
-            cityName.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            cityName.topAnchor.constraint(equalTo: weatherIcon.bottomAnchor, constant: 20),
-            
-            temperature.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            temperature.topAnchor.constraint(equalTo: cityName.bottomAnchor, constant: 20)
+        weatherIcon.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-50)  // Adjust the offset to center vertically
+            make.width.equalTo(100)
+            make.height.equalTo(100)
+        }
 
-        ])
+        temperature.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(weatherIcon.snp.bottom).offset(20)
+        }
+
     }
     
     func updateWeather(cityName: String, temperature: Double, weatherDescription: String) {
-        self.cityName.text = cityName
+//        self.cityName.text = cityName
         self.temperature.text = "\(String(format: "%.1f", temperature))°C"
         print(weatherDescription)
         updateWeatherIcon(for: weatherDescription)

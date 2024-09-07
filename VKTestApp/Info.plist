@@ -21,7 +21,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Please allow access to get weather</string>
 </dict>
 </plist>
