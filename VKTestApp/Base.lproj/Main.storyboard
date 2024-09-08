@@ -45,7 +45,7 @@
         <!--Tic Tac Toe View Controller-->
         <scene sceneID="nYZ-Ug-KOC">
             <objects>
-                <viewController storyboardIdentifier="second" id="P2S-1i-NAb" customClass="TicTacToeViewController" customModule="VKTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="second" id="P2S-1i-NAb" customClass="TicTacToeViewController" customModule="TicTacToe" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ego-9n-sMp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

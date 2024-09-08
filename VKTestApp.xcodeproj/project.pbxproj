@@ -9,20 +9,22 @@
 /* Begin PBXBuildFile section */
 		3F0948FF2C8C4A9200DE50E7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3F0948FE2C8C4A9200DE50E7 /* Alamofire */; };
 		3F0949042C8C4EDD00DE50E7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3F0949032C8C4EDD00DE50E7 /* SnapKit */; };
+		3F1E61ED2C8DDC8A008A555A /* CurrentCity in Frameworks */ = {isa = PBXBuildFile; productRef = 3F1E61EC2C8DDC8A008A555A /* CurrentCity */; };
+		3F1E61F22C8DE0A4008A555A /* CurrentWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 3F1E61F12C8DE0A4008A555A /* CurrentWeather */; };
+		3F1E61F62C8DEE62008A555A /* TicTacToe in Frameworks */ = {isa = PBXBuildFile; productRef = 3F1E61F52C8DEE62008A555A /* TicTacToe */; };
+		3F1E62252C8E0C41008A555A /* TicTacToe in Frameworks */ = {isa = PBXBuildFile; productRef = 3F1E62242C8E0C41008A555A /* TicTacToe */; };
 		3FA25CC12C87658C0079A908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA25CC02C87658C0079A908 /* AppDelegate.swift */; };
 		3FA25CC32C87658C0079A908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA25CC22C87658C0079A908 /* SceneDelegate.swift */; };
 		3FA25CC52C87658C0079A908 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA25CC42C87658C0079A908 /* ViewController.swift */; };
 		3FA25CC82C87658C0079A908 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA25CC62C87658C0079A908 /* Main.storyboard */; };
 		3FA25CCA2C87658D0079A908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA25CC92C87658D0079A908 /* Assets.xcassets */; };
 		3FA25CCD2C87658D0079A908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA25CCB2C87658D0079A908 /* LaunchScreen.storyboard */; };
-		3FA25CD82C8852970079A908 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA25CD72C8852970079A908 /* WeatherViewController.swift */; };
-		3FA25CDC2C885A040079A908 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA25CDB2C885A040079A908 /* WeatherView.swift */; };
-		3FA25CDE2C8887CB0079A908 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA25CDD2C8887CB0079A908 /* LocationViewController.swift */; };
-		3FA25CE62C88C7E40079A908 /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA25CE52C88C7E40079A908 /* TicTacToeViewController.swift */; };
-		3FA25CE82C88C8020079A908 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA25CE72C88C8020079A908 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F1E62212C8E0BC6008A555A /* CurrentWeather */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CurrentWeather; path = ../CurrentWeather; sourceTree = "<group>"; };
+		3F1E62222C8E0BCE008A555A /* CurrentCity */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CurrentCity; path = ../CurrentCity; sourceTree = "<group>"; };
+		3F1E62232C8E0BEF008A555A /* TicTacToe */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TicTacToe; path = ../TicTacToe; sourceTree = "<group>"; };
 		3FA25CBD2C87658C0079A908 /* VKTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA25CC02C87658C0079A908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FA25CC22C87658C0079A908 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,11 +33,6 @@
 		3FA25CC92C87658D0079A908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FA25CCC2C87658D0079A908 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FA25CCE2C87658D0079A908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FA25CD72C8852970079A908 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
-		3FA25CDB2C885A040079A908 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
-		3FA25CDD2C8887CB0079A908 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		3FA25CE52C88C7E40079A908 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
-		3FA25CE72C88C8020079A908 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,19 +40,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1E61F62C8DEE62008A555A /* TicTacToe in Frameworks */,
 				3F0949042C8C4EDD00DE50E7 /* SnapKit in Frameworks */,
+				3F1E61F22C8DE0A4008A555A /* CurrentWeather in Frameworks */,
+				3F1E62252C8E0C41008A555A /* TicTacToe in Frameworks */,
 				3F0948FF2C8C4A9200DE50E7 /* Alamofire in Frameworks */,
+				3F1E61ED2C8DDC8A008A555A /* CurrentCity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1E61E52C8DB988008A555A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F1E61F72C8DF937008A555A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		3FA25CB42C87658C0079A908 = {
 			isa = PBXGroup;
 			children = (
+				3F1E62232C8E0BEF008A555A /* TicTacToe */,
+				3F1E62212C8E0BC6008A555A /* CurrentWeather */,
+				3F1E62222C8E0BCE008A555A /* CurrentCity */,
 				3FA25CBF2C87658C0079A908 /* VKTestApp */,
 				3FA25CBE2C87658C0079A908 /* Products */,
+				3F1E61E52C8DB988008A555A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,9 +89,7 @@
 		3FA25CBF2C87658C0079A908 /* VKTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				3FA25CD62C8840FF0079A908 /* TicTacToe */,
-				3FA25CD52C8840F80079A908 /* Location */,
-				3FA25CD42C8840F00079A908 /* Weather */,
+				3F1E61F72C8DF937008A555A /* New Group */,
 				3FA25CC02C87658C0079A908 /* AppDelegate.swift */,
 				3FA25CC22C87658C0079A908 /* SceneDelegate.swift */,
 				3FA25CC42C87658C0079A908 /* ViewController.swift */,
@@ -82,32 +99,6 @@
 				3FA25CCE2C87658D0079A908 /* Info.plist */,
 			);
 			path = VKTestApp;
-			sourceTree = "<group>";
-		};
-		3FA25CD42C8840F00079A908 /* Weather */ = {
-			isa = PBXGroup;
-			children = (
-				3FA25CD72C8852970079A908 /* WeatherViewController.swift */,
-				3FA25CDB2C885A040079A908 /* WeatherView.swift */,
-			);
-			path = Weather;
-			sourceTree = "<group>";
-		};
-		3FA25CD52C8840F80079A908 /* Location */ = {
-			isa = PBXGroup;
-			children = (
-				3FA25CDD2C8887CB0079A908 /* LocationViewController.swift */,
-			);
-			path = Location;
-			sourceTree = "<group>";
-		};
-		3FA25CD62C8840FF0079A908 /* TicTacToe */ = {
-			isa = PBXGroup;
-			children = (
-				3FA25CE52C88C7E40079A908 /* TicTacToeViewController.swift */,
-				3FA25CE72C88C8020079A908 /* Storyboard.storyboard */,
-			);
-			path = TicTacToe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +120,10 @@
 			packageProductDependencies = (
 				3F0948FE2C8C4A9200DE50E7 /* Alamofire */,
 				3F0949032C8C4EDD00DE50E7 /* SnapKit */,
+				3F1E61EC2C8DDC8A008A555A /* CurrentCity */,
+				3F1E61F12C8DE0A4008A555A /* CurrentWeather */,
+				3F1E61F52C8DEE62008A555A /* TicTacToe */,
+				3F1E62242C8E0C41008A555A /* TicTacToe */,
 			);
 			productName = VKTestApp;
 			productReference = 3FA25CBD2C87658C0079A908 /* VKTestApp.app */;
@@ -161,6 +156,9 @@
 			packageReferences = (
 				3F0948FD2C8C4A9200DE50E7 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3F0949022C8C4EDC00DE50E7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3F1E61EB2C8DDC8A008A555A /* XCRemoteSwiftPackageReference "CurrentCity" */,
+				3F1E61EE2C8DDF83008A555A /* XCRemoteSwiftPackageReference "CurrentWeather" */,
+				3F1E61F42C8DEE62008A555A /* XCRemoteSwiftPackageReference "TicTacToe" */,
 			);
 			productRefGroup = 3FA25CBE2C87658C0079A908 /* Products */;
 			projectDirPath = "";
@@ -177,7 +175,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA25CCD2C87658D0079A908 /* LaunchScreen.storyboard in Resources */,
-				3FA25CE82C88C8020079A908 /* Storyboard.storyboard in Resources */,
 				3FA25CCA2C87658D0079A908 /* Assets.xcassets in Resources */,
 				3FA25CC82C87658C0079A908 /* Main.storyboard in Resources */,
 			);
@@ -190,11 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FA25CDC2C885A040079A908 /* WeatherView.swift in Sources */,
 				3FA25CC52C87658C0079A908 /* ViewController.swift in Sources */,
-				3FA25CD82C8852970079A908 /* WeatherViewController.swift in Sources */,
-				3FA25CDE2C8887CB0079A908 /* LocationViewController.swift in Sources */,
-				3FA25CE62C88C7E40079A908 /* TicTacToeViewController.swift in Sources */,
 				3FA25CC12C87658C0079A908 /* AppDelegate.swift in Sources */,
 				3FA25CC32C87658C0079A908 /* SceneDelegate.swift in Sources */,
 			);
@@ -439,6 +432,30 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		3F1E61EB2C8DDC8A008A555A /* XCRemoteSwiftPackageReference "CurrentCity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diasyerlan/CurrentCity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		3F1E61EE2C8DDF83008A555A /* XCRemoteSwiftPackageReference "CurrentWeather" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diasyerlan/CurrentWeather";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		3F1E61F42C8DEE62008A555A /* XCRemoteSwiftPackageReference "TicTacToe" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diasyerlan/TicTacToe";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -451,6 +468,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3F0949022C8C4EDC00DE50E7 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		3F1E61EC2C8DDC8A008A555A /* CurrentCity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F1E61EB2C8DDC8A008A555A /* XCRemoteSwiftPackageReference "CurrentCity" */;
+			productName = CurrentCity;
+		};
+		3F1E61F12C8DE0A4008A555A /* CurrentWeather */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F1E61EE2C8DDF83008A555A /* XCRemoteSwiftPackageReference "CurrentWeather" */;
+			productName = CurrentWeather;
+		};
+		3F1E61F52C8DEE62008A555A /* TicTacToe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F1E61F42C8DEE62008A555A /* XCRemoteSwiftPackageReference "TicTacToe" */;
+			productName = TicTacToe;
+		};
+		3F1E62242C8E0C41008A555A /* TicTacToe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F1E61F42C8DEE62008A555A /* XCRemoteSwiftPackageReference "TicTacToe" */;
+			productName = TicTacToe;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
